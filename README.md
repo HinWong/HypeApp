@@ -1,1 +1,3 @@
 # HypeApp
+
+Updated CRUD functions
