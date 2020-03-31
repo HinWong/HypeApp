@@ -17,6 +17,7 @@
 		4E5FD31B243257B000B7D202 /* Hype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FD31A243257B000B7D202 /* Hype.swift */; };
 		4E5FD31D24325E7000B7D202 /* HypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FD31C24325E7000B7D202 /* HypeController.swift */; };
 		4E5FD32124326CAB00B7D202 /* HypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FD32024326CAB00B7D202 /* HypesViewController.swift */; };
+		4E84B2AE2433AC0A00123BA5 /* HypeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84B2AD2433AC0A00123BA5 /* HypeError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4E5FD31A243257B000B7D202 /* Hype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hype.swift; sourceTree = "<group>"; };
 		4E5FD31C24325E7000B7D202 /* HypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeController.swift; sourceTree = "<group>"; };
 		4E5FD32024326CAB00B7D202 /* HypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypesViewController.swift; sourceTree = "<group>"; };
+		4E84B2AD2433AC0A00123BA5 /* HypeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				4E2B3FDC24326FFA000E5095 /* DateExtension.swift */,
+				4E84B2AD2433AC0A00123BA5 /* HypeError.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				4E2B3FDD24326FFA000E5095 /* DateExtension.swift in Sources */,
 				4E5FD31D24325E7000B7D202 /* HypeController.swift in Sources */,
 				4E5FD3022432543000B7D202 /* AppDelegate.swift in Sources */,
+				4E84B2AE2433AC0A00123BA5 /* HypeError.swift in Sources */,
 				4E5FD3042432543000B7D202 /* SceneDelegate.swift in Sources */,
 				4E5FD31B243257B000B7D202 /* Hype.swift in Sources */,
 			);

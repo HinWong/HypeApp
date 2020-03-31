@@ -47,35 +47,37 @@ class HypesViewController: UIViewController {
         self.refreshControl.endRefreshing()
     }
     
+    
     //MARK: - ACTIONS
     @IBAction func composeButtonTapped(_ sender: Any) {
-        let alert = UIAlertController(title: "Get Hype!", message: "What is hype may never die", preferredStyle: .alert)
-        alert.addTextField { (textField) in
-            textField.placeholder = "What is hype today"
-            textField.autocorrectionType = .yes
-            textField.delegate = self
-        }
-        
-        let saveButton = UIAlertAction(title: "Save", style: .default) { (_) in
-            
-            guard let body = alert.textFields?.first?.text, !body.isEmpty else { return }
-                
-            HypeController.shared.saveHype(body: body) { (success) in
-                DispatchQueue.main.async {
-                    if success {
-                        self.updateViews()
+        presentAddHypeAlert(for: nil)
+    }
+    
+    func presentAddHypeAlert(for hype: Hype?) {
+                let alert = UIAlertController(title: "Get Hype!", message: "What is hype may never die", preferredStyle: .alert)
+                alert.addTextField { (textField) in
+                    textField.placeholder = "Add a hype message"
+                    textField.autocorrectionType = .yes
+                    textField.delegate = self
+                }
+                let saveButton = UIAlertAction(title: "Save", style: .default) { (_) in
+                    guard let body = alert.textFields?.first?.text,
+                        !body.isEmpty else { return }
+                    
+                    HypeController.shared.saveHype(body: body) { (success) in
+                        DispatchQueue.main.async {
+                            if success {
+                                self.updateViews()
+                            }
+                        }
                     }
                 }
+                alert.addAction(saveButton)
+                let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
+                alert.addAction(cancelButton)
+                present(alert, animated: true)
             }
-        }
-        alert.addAction(saveButton)
-        
-        let cancelButton = UIAlertAction(title: "NVM", style: .cancel)
-        alert.addAction(cancelButton)
-        
-        present(alert, animated: true)
     }
-}
 
 //MARK: - TABLEVIEW DELEGATE AND DATA SOURCE
 
